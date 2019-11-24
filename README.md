@@ -1,16 +1,12 @@
 # babelArea
 
-- 介绍
-    - 背景
-    - babel的版本变更
-    - [babel各个模块介绍](doc/modules.md)
+- [简介](#introduce)
+- [版本变更](doc/version-history.md)
+- [模块介绍](doc/modules.md)
 - [配置](doc/configration.md)
-   
-- 参考地址    
+- [参考地址](#reference)    
 
-## 介绍
-
-### 背景
+<h2 id="introduce">简介</h2>
 
 说起ES6，webpack，打包，模块化总是离不开babel，babel作为一个js的编译器已经被广泛使用。在babel的官网是这样介绍它的：
 
@@ -25,22 +21,7 @@ babel的出现就是为了解决这个问题，把那些使用新标准编写的
 经常有人在使用`babel`的时候并没有弄懂`babel`是干嘛的，只知道要写ES6就要在webpack中引入一个`babel-loader`，然后胡乱在网上copy一个`.babelrc`到项目目录就开始了. 理解babel的配置很重要，可以避免一些不必要的坑，比如：代码中使用`Object.assign`在一些低版本浏览器会报错，以为是webpack打包时出现了什么问题，其实是`babel`的配置问题。
 
 
-### Babel的版本变更
-
-- babel5 babel属于全家桶型，只要安装babel就会安装babel相关的所有工具， 即装即用
-- babel6 
-    - 移除babel全家桶安装，拆分为单独模块，例如：
-        - babel-core
-        - babel-cli
-        - babel-node
-        - babel-polyfill
-    - 新增 `.babelrc` 配置文件，基本上所有的`babel`转译都会来读取这个配置；
-    - 新增 plugin 配置，所有的东西都插件化，什么代码要转译都能在插件中自由配置；
-    - 新增 preset 配置，babel5会默认转译ES6和jsx语法，babel6转译的语法都要在`perset中`配置，`preset`简单说就是一系列plugin包的使用。
-
-
-
-## 参考地址
+<h2 id="reference">参考地址</h2>
 
 - [babel 中文](https://www.babeljs.cn/)
 - [babel到底该如何配置？](https://blog.csdn.net/qq_16339527/article/details/79253865)
