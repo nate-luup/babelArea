@@ -4,7 +4,7 @@
 - [版本变更](doc/version-history.md)
 - [模块介绍](doc/modules.md)
 - [配置](doc/configration.md)
-- [参考地址](#reference)    
+- [参考地址](#reference)
 
 <h2 id="introduce">简介</h2>
 
@@ -23,6 +23,7 @@ babel的出现就是为了解决这个问题，把那些使用新标准编写的
 
 <h2 id="reference">参考地址</h2>
 
+- [babeljs](https://babeljs.io/)
 - [babel 中文](https://www.babeljs.cn/)
 - [babel到底该如何配置？](https://blog.csdn.net/qq_16339527/article/details/79253865)
 - [babel github](https://github.com/babel/babel/tree/master/packages)
