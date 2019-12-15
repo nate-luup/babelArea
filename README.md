@@ -1,6 +1,7 @@
 # babelArea
 
 - [简介](#introduce)
+- [使用指南](doc/usage.md)
 - [版本变更](doc/version-history.md)
 - [模块介绍](doc/modules.md)
 - [配置](doc/configration.md)
