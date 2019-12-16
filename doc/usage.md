@@ -1,4 +1,4 @@
-# 使用指南
+# [使用指南](https://www.babeljs.cn/docs/usage)
 
 ## 概览
 本指南将想你展示如何将 ES2015+ 语法的 JavaScript 代码编译为能在当前浏览器上工作的代码。这将涉及到新语法的转换和缺失特性的修补。
@@ -36,7 +36,7 @@ module.exports = { presets };
 3. 运行此命令将 `src` 目录下的所有代码编译到 `lib` 目录：
 
 ```bash
-npx babel src --out-dir lib
+npx babel src --out-dir dist
 ```
 
 ## CLI 命令行的基本用法
@@ -60,7 +60,7 @@ babel.transform("code", optionsObject);
 ```bash
 npm install --save-dev @babel/core @babel/cli
 
-npx babel src --out-dir lib
+npx babel src --out-dir dist
 ```
 这将解析 `src` 目录下的所有 JavaScript 文件，并应用我们所指定的代码转换功能，然后把每个文件输出到 `lib` 目录下。由于我们还没有指定任何代码转换功能，所以输出的代码将与输入的代码相同（不保留原代码格式）。我们可以将我们所需要的代码转换功能作为参数传递进去。
 
@@ -74,7 +74,7 @@ npx babel src --out-dir lib
 ```bash
 npm install --save-dev @babel/plugin-transform-arrow-functions
 
-npx babel src --out-dir lib --plugins=@babel/plugin-transform-arrow-functions
+npx babel src --out-dir dist --plugins=@babel/plugin-transform-arrow-functions
 ```
 
 现在，我们代码中的所有箭头函数（`arrow functions`）都将被转换为 ES5 兼容的函数表达式了：
@@ -87,7 +87,7 @@ const fn = () => 1;
 var fn = function fn() {
   return 1;
 };
-```    
+```
 
 这是个好的开始！但是我们的代码中仍然残留了其他 ES2015+ 的特性，我们希望对它们也进行转换。我们不需要一个接一个地添加所有需要的插件，我们可以使用一个 "`preset`" （即一组预先设定的插件）
 
@@ -96,7 +96,7 @@ var fn = function fn() {
 ```bash
 npm install --save-dev @babel/preset-env
 
-npx babel src --out-dir lib --presets=@babel/env
+npx babel src --out-dir dist --presets=@babel/env
 ```
 
 如果不进行任何配置，上述 `preset` 所包含的插件将支持所有最新的 JavaScript （ES2015、ES2016 等）特性。但是 `preset` 也是支持参数的。我们来看看另一种传递参数的方法：配置文件，而不是通过终端控制台同时传递 `cli` 和 `preset` 的参数。
@@ -124,7 +124,7 @@ module.exports = { presets };
 ```
 
 ```bash
-npx babel src --out-dir lib --config-file ./babel.config.js
+npx babel src --out-dir dist --config-file ./babel.config.js
 ```
 
 现在，名为 `env` 的 `preset` 只会为目标浏览器中没有的功能加载转换插件。语法都已经清楚了，接下来我们看看 polyfills 。
