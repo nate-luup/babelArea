@@ -3,9 +3,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "test": "",
-    "compiler": "babel src --out-dir dist --watch",
-    "build": "babel src --out-dir dist"
+    "compiler": "babel src --out-dir dist --watch"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
@@ -17,10 +15,8 @@
     "@babel/register": "^7.7.4"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.7.0",
-    "@babel/runtime": "^7.7.7",
-    "@babel/runtime-corejs3": "^7.7.7",
     "core-js": "^3.6.2",
+    "@babel/runtime-corejs3": "^7.7.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }
